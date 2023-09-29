@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+    <style>
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color: pink;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color: yellow;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        </style>
+</head>
+<body>
+    <!-- La etiqueta para los enlaces es a y se utiliza con el atributo href para indicar el destino de ese enlace -->
+    <a href="https://www.amazon.es" target="_blank">Amazon</a>
+    <br>
+    <!-- En vez de un texto, podemos utilizar como "gancho" del enlace una imagen-->
+    <!-- Opcionalmente, podemos añadir el atributo target con el valor "_blank" para indicar que se abra en otra ventana -->
+    <!-- Otro atributo opcional es title, que muestra un tooltip (cartelito) cuando pasas el ratón por el enlace-->
+    <a href="https://www.amazon.es" target="_blank" title="Vamos a comprar en Amazon">
+        <img src="images/day89-christmas-gift.png" alt="Regalitos" width="50%" height="50%">
+    </a>
+    
+</body>
+</html>
