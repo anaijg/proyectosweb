@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+    <style>
+        ul {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+   <!-- Las listas pueden ser numeradas o no numeradas--> 
+   <h1>Listas numeradas</h1><!--Del ingles Ordered List, de ahí la etiqueta ol-->
+   <ol style="list-style-type: lower-alpha;"><!-- esta etiqueta indica que la lista comienza / termina, pero no tiene más contenido-->
+        <!--Los puntos que contiene se tienen que añadir con la etiqueta li (de List Item)-->
+        <li>Lenguajes de marcas</li>
+        <li>Entornos de desarrollo</li>
+        <li>Programación</li>
+        <li>...</li>
+   </ol>
+   <h1>Listas no numeradas</h1>
+   <!-- Son las que ponen puntos, no establecen una ordenación, de ahí la etiqueta ul (Unordered List)-->
+   <ul style="list-style-type: square;"><!-- esta etiqueta indica que la lista comienza / termina, pero no tiene más contenido-->
+    <!--Los puntos que contiene se tienen que añadir con la etiqueta li (de List Item)-->
+        <li>Lenguajes de marcas</li>
+        <li>Entornos de desarrollo</li>
+        <li>Programación</li>
+        <li>...</li>
+    </ul>
+   <h1>Listas anidadas</h1>
+   <!--Son listas que están dentro de otras listas y pueden combinarse tanto numeradas como no numeradas-->
+   <ul style="list-style-type: disc;">
+        <li>Lenguajes de marcas
+            <ol><!-- Debajo del item que me interese (sin cerrar la etiqueta li) añado una lista del tipo que yo quiera; en este ejemplo, la lista ol está anidada (dentro de) la lista ul-->
+                <li>Introducción a los lenguajes de marcas</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>XML</li>
+            </ol>
+        </li><!-- Al cerrar la lista anidada, cierro el elemento li que había quedado abierto-->
+        <li>Entornos de desarrollo
+            <ol><!-- Debajo del item que me interese añado una lista del tipo que yo quiera; en este ejemplo, la lista ol está anidada (dentro de) la lista ul-->
+                <li>Introducción al desarrollo de software</li>
+                <li>Instalación y uso de entornos de desarrollo</li>
+                <li>Diagramas de flujo</li>
+            </ol> 
+        </li>       
+        <li>Programación</li>
+        <li>...</li>
+   </ul>
+</body>
+</html>
