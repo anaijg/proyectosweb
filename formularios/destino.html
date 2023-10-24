@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado">
+        <h2>Valores del Formulario:</h2>
+        <p id="nombre-valor"></p>
+        <p id="lenguaje-valor"></p>
+    </div>
+
+    <script>
+        document.getElementById("mi-formulario").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const formulario = event.target;
+            const nombre = formulario.elements["nombre"].value;
+            /*const lenguaje = formulario.elements["lenguaje"].value;*/
+
+            document.getElementById("nombre-valor").textContent = "Nombre: " + nombre;
+            /*document.getElementById("lenguaje-valor").textContent = "Lenguaje seleccionado: " + lenguaje;*/
+        });
+    </script>
+</body>
+</html>
