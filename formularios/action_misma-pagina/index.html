@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        form {
+            width: 50%;
+        }
+        fieldset {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Un formulario lleva la etiqueta form-->
+    <!-- En los formularios son muy importantes los atributos (no sólo las etiquetas)-->
+    <!-- Para la etiqueta form:
+            action es la página del servidor web al que enviamos la información del formulario
+            method es el método HTTP de envío (get | post | put)
+            id es el identificador único del elemento en que esté-->
+    <form action="index.html" method="get" id="mi-formulario">
+        <!-- Vamos a meter cada pareja label-input en un bloque fieldset, para estructurar el formulario; fieldset añade un salto de línea al cerrarse, igual que la etiqueta de párrafo (p)-->
+        <fieldset>
+            <!--Atributos importantes: el valor del atributo for de label tiene que coincidir con el del id del input-->
+            <h2>Cuadro de texto</h2>
+            <label for="cuadro-de-texto">Nombre:</label>
+            <input type="text" name="nombre" id="cuadro-de-texto" placeholder="Escribe tu nombre">
+        </fieldset>
+        <br>
+        <fieldset>
+            <h2>Radio buttons: sólo se puede seleccionar una de las opciones</h2>
+            <!-- A continuación mostramos los tres circulitos (o el número que queramos): por cada circulito un input
+            Todos ellos, si forman parte del mismo grupo, deben tener el mismo atributo name y diferentes id (para relacionarlos de forma única con las etiquetas label);
+             el atributo value es el valor que se enviará al servidor o página de destino
+        -->
+            <p>"Cuál es tu lenguaje web favorito?</p>
+            <input type="radio" name="lenguaje" id="html" value="HTML"><label for="html">HTML5</label>
+            <input type="radio" name="lenguaje" id="css" value="CSS"><label for="css" >CSS3</label>
+            <input type="radio" name="lenguaje" id="js" value="JavaScript"><label for="js">JavaScript</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <h2>Casillas de verificación: puede haber más de una casilla seleccionada</h2>
+            <p>¿Cuáles son tus aficiones?</p>
+            <input type="checkbox" name="fútbol" id="ft" value="Fútbol"><label for="ft">Fútbol</label>
+            <input type="checkbox" name="baile" id="bl" value="Baile"><label for="bl">Baile</label>
+            <input type="checkbox" name="leer" id="lr" value="Leer"><label for="lr">Leer</label>
+        </fieldset>
+        <fieldset>
+            <!-- El botón de enviar lo ponemos al final de todo-->
+            <input type="submit" value="Enviar respuesta">
+        </fieldset>
+    </form>
+
+    <div id="resultado">
+        <p id="nombre-valor"></p>
+        <p id="lenguaje-valor"></p>
+        <p id="checkbox-valores"></p>
+    </div>
+
+    <script>
+        document.getElementById("mi-formulario").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const formulario = event.target;
+            const nombre = formulario.elements["nombre"].value;
+            const lenguaje = formulario.elements["lenguaje"].value;
+            const futbol = formulario.elements["fútbol"].value;
+            const bailar = formulario.elements["baile"].value;
+            const lectura = formulario.elements["leer"].value;
+            /* A continuación "rellenamos" los párrafos correspondientes con el texto siguiente: */
+            document.getElementById("nombre-valor").textContent = "Nombre: " + nombre;
+            document.getElementById("lenguaje-valor").textContent = "Lenguaje seleccionado: " + lenguaje;
+            /*document.getElementById("checkbox-valor").textContent = "Aficiones: " + futbol + " " + bailar + " " + lectura;*/
+
+            /* checkbox */
+            var elementosSeleccionados = [];
+            
+            // Itera a través de los elementos del formulario
+            for (var i = 0; i < formulario.elements.length; i++) {
+                var elemento = formulario.elements[i];
+                if (elemento.type === "checkbox" && elemento.checked) {
+                    elementosSeleccionados.push(elemento);
+                }
+            }
+            
+            // Muestra los elementos seleccionados
+            var elementos = "Elementos seleccionados: ";
+            for (var j = 0; j < elementosSeleccionados.length; j++) {
+                elementos = elementos + " " + elementosSeleccionados[j].value;
+            }
+
+            document.getElementById("checkbox-valores").textContent = elementos;
+        });
+    </script>
+    
+</body>
+</html>

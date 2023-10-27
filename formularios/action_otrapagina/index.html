@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <style>
+            fieldset {
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Un formulario lleva la etiqueta form-->
+        <!-- En los formularios son muy importantes los atributos (no solo las etiquetas)-->
+        <!-- Para la etiqueta form: 
+            Action es la pagina del servidor web al que enviamos la información del formulario
+        method es el metodo HTTP de envío (get | post | put) 
+        id es el identificador unico del elemento en que esté-->
+
+        <form action="final.html" method="get" id="mi-formulario" target="_blank">
+            <!-- Vamos a meter cada pareja label-input en un bloque fieldset, para estructurar formulario; fieldset añade un salto de linea al cerrarse, igual que la etiqueta parrafo (p)-->
+            <fieldset>
+                <!-- Atributos importantes: el valor del atributo for de label, tiene que coincidir con el id del input. -->
+                <h2>Cuadro de texto</h2>
+                <label for="cuadro-de-texto">Nombre: </label>
+                <input type="text" name="nombre" id="cuadro-de-texto"
+                    placeholder="Escribe tu nombre">
+            </fieldset>
+
+            <fieldset>
+                <h2>Radio Button</h2>
+                <p>Cual es tu lenguaje web favorito</p>
+                <input type="radio" name="lenguaje" id="html" value="HTML"><label for="html">HTML5</label>
+                <input type="radio" name="lenguaje" id="css" value="CSS"><label for="css">CSS3</label>
+                <input type="radio" name="lenguaje" id="js" value="JavaScript"><label for="js">JavaScript</label>
+            </fieldset>
+
+            <fieldset>
+                <h3>Casillas de verificación: admite selección de varias a la vez</h3>
+                <h4>Medio de transporte:</h4>
+                <input type="checkbox" id="t1" name="t1" value="Bicicleta">
+                <label for="t1">Bicicleta</label><br>
+                <input type="checkbox" id="t2" name="t2" value="Patinete">
+                <label for="t2">Patinete</label><br>
+                <input type="checkbox" id="t3" name="t3" value="Moto">
+                <label for="t3">Moto</label><br>
+                <input type="checkbox" id="t4" name="t4" value="Coche">
+                <label for="t4">Coche</label><br>
+                <input type="checkbox" id="t5" name="t5" value="Transporte público">
+                <label for="t5">Transporte público</label><br>
+            </fieldset>
+            <fieldset>                
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </body>
+</html>
