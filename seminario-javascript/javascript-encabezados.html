@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=E, initial-scale=1.0">
     <title>Encabezados</title>
     <script>
-        function muestra() {
+        function muestra(color) {
             document.getElementById("miDiv").innerHTML += "";
             for(var i = 1; i <=6; i++) {
-            document.getElementById("miDiv").innerHTML += "<h" + i + ">Cabecera de nivel " + i + "</h" + i + ">";
+            //document.getElementById("miDiv").innerHTML += "<h" + i + " style='color: brown;'>Cabecera de nivel " + i + "</h" + i + ">";
+            document.getElementById("miDiv").innerHTML += "<h" + i + " style='color: " + color + ";'>Cabecera de nivel " + i + "</h" + i + ">";
          }
+        }
+        function muestra2(color) {
+            document.getElementById("miDiv").innerHTML += "";
+            var i = 1;
+            while(i <=6) {
+                document.getElementById("miDiv").innerHTML += "<h" + i + " style='color: " + color + ";'>Cabecera de nivel " + i + "</h" + i + ">";
+
+                i++;
+            }
         }
     </script> 
 </head>
 <body>
     <form action="">
-        <input type="button" value="Mostrar" onclick="muestra()">
+        <input type="button" value="Mostrar for" onclick="muestra('red')">
+        <input type="button" value="Mostrar while" onclick="muestra2('blue')">
     </form>
-    <div id="miDiv"></div>
+
+    <div id="miDiv" ></div>
+    <div id="miDiv2"></div>
  
         
     
