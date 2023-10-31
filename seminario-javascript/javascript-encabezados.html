@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=E, initial-scale=1.0">
+    <title>Encabezados</title>
+    <script>
+        function muestra() {
+            for(var i = 1; i <=6; i++) {
+            document.getElementById("miDiv").innerHTML += "<h" + i + ">Cabecera de nivel " + i + "</h" + i + ">";
+         }
+        }
+    </script> 
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Mostrar" onclick="muestra()">
+    </form>
+    <div id="miDiv"></div>
+ 
+        
+    
+</body>
+</html>
