@@ -6,17 +6,24 @@
     <title>Hola Mundo</title>
 </head>
 <body>
+    <div id="miDiv"></div>
     <script>
-        alert("Hola mundo en JavaScript");
+        alert("Hola mundo en \"JavaScript\"");
         // comentario de una línea
         /* comentario
         de varias 
         líneas */
         console.log("esto sale por consola (ver inspeccionar > consola porque si no no lo vas a ver)");
+    
+        // declaramos las variables mediante var, sin especificar el tipo
+        var mivariable_1 = 30;
+        var mivariable_2 = mivariable_1 + 10;
+        var mivariable_3 = prompt("Introduce un valor:");
+        document.getElementById("miDiv").innerHTML = mivariable_3;
     </script>
     <p onclick="alert('evento click en párrafo')">Hacer click aquí</p>
     <!--Los comentarios son igual que en Java: // para una línea, /* ... */ para varias líneas-->
-
+    
 
 </body>
 </html>
