@@ -6,6 +6,7 @@
     <title>Encabezados</title>
     <script>
         function muestra() {
+            document.getElementById("miDiv").innerHTML += "";
             for(var i = 1; i <=6; i++) {
             document.getElementById("miDiv").innerHTML += "<h" + i + ">Cabecera de nivel " + i + "</h" + i + ">";
          }
