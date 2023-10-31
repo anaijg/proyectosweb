@@ -17,6 +17,7 @@
             height: 400px;
             border: 1px solid black;
             border-collapse: collapse;
+            background-color: white;
         }
         th {
             width: 50px;
@@ -35,29 +36,29 @@
 </head>
 <body>
 <table>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr><!--fila 1-->
+        <td rowspan="2" style="background-color: #0b769d;"></td>
+        <td style="background-color: #def5ee;"></td>
+        <td style="background-color: #c2260c;"></td>
+        <td rowspan="4" style="background-color: #f68c7b;"></td>
     </tr>
-    <tr>
+    <tr><!--fila 2-->
+        <!--<td></td> del rowspan="2" de la primera fila-->
+        <td style="background-color: #ffb279;"></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <!--<td></td> del rowspan="4" de la primera fila-->
     </tr>
-    <tr>
+    <tr><!--fila 3-->
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td colspan="2" rowspan="2" style="background-color: #ffe5d2;"></td>
+        <!--<td></td> del colspan="2" de esta fila-->
+        <!--<td></td> del rowspan="4" de la primera fila-->
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr><!--fila 4-->
+        <td style="background-color: #f14124;"></td>
+        <!--<td></td> del rowspan="2" de la fila 3-->
+        <!--<td></td> del rowspan="2" colspan="2" de la fila 3-->
+        <!--<td></td> del rowspan="4" de la primera fila-->
     </tr>
 </table>
 
