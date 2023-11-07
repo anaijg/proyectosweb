@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <form action="final.html" method="get" id="mi-formulario" target="_blank">
+          <h1>Registro de DEVs</h1>  
+            <section class="Datos">
+                <p class="barra">Completa los siguientes campos</p>
+                  <div class="barra">
+                      <label for="ct-nombre">Nombre (Obligatorio)</label><br>
+                      <input type="text" name="nombre" id="ct-nombre" required>
+                    </div>
+                  <br>
+                    <div class="barra">
+                      <label for="ct-apellidos">Apellidos (Obligatorio)</label><br>
+                      <input type="text" name="apellidos" id="ct-apellidos" required>
+                    </div>
+                  <br>
+                    <div class="barra" id="barra-final">
+                      <label for="ct-email">Email (Obligatorio)</label><br>
+                      <input type="text" name="email" id="ct-email" required>
+                    </div>
+              </section>
+              <section class="la">
+                <p>Indique en que lado de la aplicacion desarrollas</p>
+                  <div class="Circulo">
+                  <input type="radio" name="AppD" id="FE" value="Front-end">
+                  <label for="FE">Front-end</label>
+                </div>
+                  <br>
+                  <div class="Circulo">
+                  <input type="radio" name="AppD" id="BE" value="Back-end">
+                  <label for="BE">Back-end</label>
+                </div>
+                  <br>
+                  <div class="Circulo final">
+                  <input type="radio" name="AppD" id="FS" value="Full stack">
+                  <label for="FS">Full stack</label>
+                  </div>
+                </section>
+              <section class="Expp">
+                <h4>Nivel de experiencia:</h4>
+                <div class="Barrades">
+                <select name="Exp" id="Exp">
+                  <option value="Op">Seleccione una de las opciones</option>
+                  <option value="Junior">Junior</option>
+                  <option value="Senior">Senior</option>
+                  <option value="Expert">Expert</option>
+                </select>
+              </div>
+              </section>
+              <section class="ULti">
+                      <p>Seleccione las tecnologias que utilizas</p>
+                      <div class="Checkdote">
+                      <p>
+                        <input type="checkbox" name="t1" id="html" value="Html" class="Check">
+                          <label for="html">Html</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" name="t2" id="css" value="CSS" class="Check">
+                          <label for="css">CSS</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" name="t3" id="js" value="JavaScript" class="Check">
+                          <label for="js">JavaScript</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" name="t4" id="php" value="PHP" class="Check">
+                          <label for="php">PHP</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" name="t5" id="C#" value="C#" class="Check">
+                          <label for="C#">C#</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" name="t6" id="python" value="Python" class="Check">
+                          <label for="python">Python</label>
+                      </p>
+                      <p>
+                        <input type="checkbox" name="t7" id="java" value="Java" class="Check">
+                          <label for="java">Java</label>
+                      </p>
+                    </div>
+                  </section>
+                  <section class="cuadro">
+                    
+                      <p>Cuenta algo mas acerca de tu experiencia:</p>
+                      <div class="Cuadro">
+                      <textarea name="textarea" rows="10" cols="50" placeholder="Escriba aqui."></textarea>
+                    </div>
+                  </section>
+                    <br>
+                    <div class="Botons">
+                      <input type="submit" id="boton">
+                    </div>
+                  
+        </form>
+    </body>
+</html>

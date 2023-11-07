@@ -1,0 +1,98 @@
+
+body {
+    background-color: #5f689c;
+}
+#mi-formulario {
+    background-color: white;
+    justify-content: center;
+    display: block;
+    margin-left: 10vmax;
+    margin-right: 10vmax;
+    border-radius: 15px;
+}
+.Datos {
+    background-color: rgb(189, 213, 235);
+    border: #5f689c solid 1px;
+    border-radius: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.la {
+    background-color: rgb(189, 213, 235);
+    border: #5f689c solid 1px;
+    border-radius: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.Expp {
+    background-color: rgb(189, 213, 235);
+    border: #5f689c solid 1px;
+    border-radius: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.ULti {
+    background-color: rgb(189, 213, 235);
+    border: #5f689c solid 1px;
+    border-radius: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.cuadro {
+    background-color: rgb(189, 213, 235);
+    border: #5f689c solid 1px;
+    border-radius: 15px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+#barra-final {
+    padding-bottom: 10px;
+}
+.final {
+    padding-bottom: 10px;
+}
+.Circulo {
+    text-align: left;
+    padding-left: 4.5vw;
+}
+#Exp {
+    margin-bottom: 10px;
+}
+h1 {
+    padding-top: 4vw;
+    text-align: center;
+}
+.Checkdote {
+    text-align: left;
+    padding-left: 4vw;
+}
+textarea {
+    width: 90%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    margin-bottom: 5px;
+}
+select {
+    width: 30vw;
+}
+.Botons {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 3vw;
+}

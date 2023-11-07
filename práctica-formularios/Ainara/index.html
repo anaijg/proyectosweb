@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de DEVs</title>
+    <style>
+        h1 {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+            color:rgb(8, 3, 78); 
+            text-align: center;
+        }
+        h3 {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: rgb(8, 3, 78); 
+            text-align: center; 
+            font-size: smaller; 
+        }
+        h2{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(48, 14, 107); 
+            font-size:medium; 
+        }
+        form {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+            color: rgb(48, 14, 107);
+            position: relative;
+        }
+        fieldset {
+            border-color: transparent; 
+        }
+        select {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+            color: rgb(48, 14, 107);
+        }
+        body {
+            background-color: rgb(212, 238, 252);
+        }
+        input{
+            border-radius: 8px; border-width: 1px;
+        }
+        textarea{
+            border-radius: 8px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 7%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Registro de DEVs</h1>
+    <h3>Completa los siguientes campos</h3>
+    <div>
+    <form action="resultado.html" method="post" id="formulario-devs">
+        <fieldset>
+            <label for="cuadro-de-nombre">Nombre (obligatorio)</label> 
+            <label for="cuadro-de-apellido">Apellido (obligatorio)</label>
+            <br>
+            <input type="text" name="Nombre" size="16" id="cuadro-de-nombre" placeholder="Ej: Pedro" required>            
+            <input type="text" name="Apellido" size="16"  id="cuadro-de-apellido" placeholder="Ej: Rodríguez" required>
+            <br>
+            <label for="cuadro-de-email">Email (obligatorio)</label> <br>
+            <input type="email" name="Email" id="cuadro-de-email" placeholder="Ej: pedrorodriguez@email.com" required>
+        </fieldset>
+        <fieldset>
+            <h2>Indica en qué lado de la aplicación desarrollas</h2>
+            <input type="radio" name="desarrollo" id="fe" value="Frontend" checked> <label for="fe">Front-end</label> <br>
+            <input type="radio" name="desarrollo" id="be" value="Backend"> <label for="be">Back-end</label> <br>
+            <input type="radio" name="desarrollo" id="fs" value="Fullstack"><label for="fs"> Full Stack</label>
+            </fieldset>
+            <fieldset>
+                <h2>Nivel de experiencia</h2>
+                <select name="experiencia" id="experiencia">
+                    <option value="Seleccion">Selecciona una de las opciones</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                    <option value="Experto">Experto</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <h2>Selecciona las tecnologías que utilizas:</h2>
+                <input type="checkbox" name="lenguaje" id="html"
+                value="Html"><label for="html">HTML</label>
+                <input type="checkbox" name="lenguaje" id="css" value="Css"><label for="css">CSS</label>
+                <input type="checkbox" name="lenguaje" id="js" value="Javascrip"><label for="js">JavaScript</label>
+                <input type="checkbox" name="lenguaje" id="php" value="Php"><label for="php">PHP</label>
+                <input type="checkbox" name="lenguaje" id="c" value="C"><label for="c">C#</label>
+                <input type="checkbox" name="lenguaje" id="py" value="Python"><label for="py">Python</label>
+                <input type="checkbox" name="lenguaje" id="ja" value="Java"><label for="ja">Java</label>
+            </fieldset>
+            <fieldset>
+                <h2>Cuentanos algo más acerca de tu experiencia</h2>
+               <textarea name="texto" rows="10" cols="40" id="exper"></textarea><label for="exper"></label>
+            </fieldset>
+            <fieldset>
+                <input style="color: rgb(48, 14, 107); background-color: rgb(189, 186, 255); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" type="submit" name="Enviar">
+            </fieldset>
+    </form>
+    </div>
+    <div id="resultado">
+         <p id="nombre-valor"></p>
+         <p id="apellido-valor"></p>
+         <p id="email-valor"></p>
+         <p id="checkbox-valor"></p>
+         <p id="experiencia-valor"></p>
+         <p id="tecnologias-valor"></p>
+         <p id="texto-valor"></p>
+      </div>
+ 
+    <script>
+        document.getElementById("formulario-devs").addEventListener("submit", function (event) { 
+            event.preventDefault(); 
+            const formulario = event.target;
+            const nombre = formulario.elements["Nombre"].value
+            const apellido = formulario.elements["Apellido"].value
+            const email = formulario.elements["Email"].value
+            const checkbox = formulario.elements["desarrollo"].value
+            const experiencia = formulario.elements["experiencia"].value
+            const tecnologias = [];
+            const checkboxes = formulario.elements["lenguaje"];
+            for (let i = 0; i < checkboxes.length; i++){
+                if (checkboxes[i].checked){
+                    tecnologias.push(checkboxes[i].value);
+                }
+            }
+            const texto = formulario.elements["texto"].value
+            const nuevaurl = "resultado.html?nombre=" + nombre + "&apellido=" + apellido + "&email=" + email + "&checkbox=" + checkbox + "&experiencia=" + experiencia + "&tecnologias=" + tecnologias + "&texto=" + texto;
+            window.location.href=nuevaurl
+
+              
+              document.getElementById("nombre-valor").textContent = "Nombre: " + nombre; 
+              document.getElementById("apellido-valor").textContent="Apellido: " + apellido
+              document.getElementById("email-valor").textContent="Email: " + email
+              document.getElementById("checkbox-valor").textContent="Aplicaciones: " + checkbox
+              document.getElementById("experiencia-valor").textContent="Experiencia: " + experiencia
+              document.getElementById("tecnologias-valor").textContent="Tecnologías: " + tecnologias
+              document.getElementById("texto-valor").textContent="Experiencia: " + texto
+             }); 
+    </script>
+
+</body>
+</html>

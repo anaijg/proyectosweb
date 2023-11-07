@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado Formulario</title>
+<style>
+    table, td, th {
+        border: 2px solid rgb(164, 211, 255);
+        border-collapse: collapse;
+        width: 40%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(164, 211, 255);
+        background-color: rgb(51, 43, 80);
+        text-align: center;
+    }
+    h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 7%;
+    }
+</style>
+</head>
+<body>
+  <h1>Resultados del formulario:</h1>
+  <div>
+  <script>       
+   function getParameterByName(name, url){
+    if (!url) url = window.location.href;
+    name=name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp ("[?&]"+ name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2])return "";
+    return decodeURIComponent (results[2].replace(/\+/g, " "));
+   }          
+
+   var nombre = getParameterByName ("nombre")
+   var apellido = getParameterByName ("apellido")
+   var email = getParameterByName ("email")
+   var checkbox = getParameterByName ("checkbox")
+   var experiencia = getParameterByName ("experiencia")
+   var tecnologias = getParameterByName ("tecnologias")
+   var texto = getParameterByName ("texto")
+
+
+   document.write("<table>"+"<tr>" + "<td>Nombre <td>" + nombre + "</td></tr>")
+    document.write("<tr><td>Apellidos <td>" + apellido + "</td>"+"</tr>")
+    document.write("<tr><td>Email <td>" + email + "</td></tr>")
+    document.write("<tr><td>Desarrollador <td>" + checkbox + "</td></tr>")
+    document.write("<tr><td>Experiencia <td>" + experiencia
+       + "</td></tr>")
+    document.write("<tr><td>Tecnologías <td>" + tecnologias + "</td></tr>")
+    document.write("<tr><td>Cuentanos más <td>" + texto + "</td></tr>")
+  </script>
+  </div>
+</body>
+</html>

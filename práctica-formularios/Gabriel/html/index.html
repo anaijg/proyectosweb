@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/index_estilo.css">
+        <title>Formulario</title>
+    </head>
+    
+    <body>
+
+        <form action="destino.html" method="get" id="mi-formulario" target="_blank">
+
+            <h1>Registro de DEVs</h1>
+            <p>Completa los siguientes campos</p>
+
+            <div class="mover">
+            <label for="cuadro_nombre" class="subir_textos">Nombre (oblgatorio)</label>
+            <input type="text" name="nombre" id="cuadro_nombre" required>
+            </div>
+            <div class="mover">
+            <label for="cuadro_apellidos" class="subir_textos">Apellidos (obligatorio)</label>
+            <input type="text" name="apellidos" id="cuadro_apellidos" required>
+            </div>
+            <div class="mover">
+            <label for="cuadro_email" class="subir_textos">Email (obligatorio)</label>
+            <input type="text" name="email" id="cuadro_email" required>
+            </div>
+
+            <p>Indica en qué lado de la aplicación desarrollas</p>
+            <input type="radio" name="lado" id="front_end" value="Front-end"><label for="front_end">Front-end</label> <br>
+            <input type="radio" name="lado" id="back_end" value="Back-end"><label for="back_end">Back-end</label> <br>
+            <input type="radio" name="lado" id="full_stack" value="Full Stack"><label for="full_stack">Full Stack</label> <br>
+            
+            <p>Nivel de experiencia</p>
+            <select name="listaDesplegable" id="listaDesplegable">
+                <option value="Sin seleccionar">Selecciona una de las opcciones</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>
+                <option value="Experto">Experto</option>
+            </select>
+            
+            <p>Selecciona las tecnologías que utilizas:</p>
+            <input type="checkbox" id="t1" name="t1" value="HTML">
+            <label for="t1">HTML</label>
+            <input type="checkbox" id="t2" name="t2" value="CSS">
+            <label for="t2">CSS</label>
+            <input type="checkbox" id="t3" name="t3" value="JavaScript">
+            <label for="t3">JavaScript</label>
+            <input type="checkbox" id="t4" name="t4" value="PHP">
+            <label for="t4">PHP</label>
+            <input type="checkbox" id="t5" name="t5" value="C#">
+            <label for="t5">C#</label>
+            <input type="checkbox" id="t6" name="t6" value="Python">
+            <label for="t6">Python</label>
+            <input type="checkbox" id="t7" name="t7" value="Java">
+            <label for="t7">Java</label>
+            
+            <p>Cuenta algo más acerca de tu experiencia:</p>
+            <textarea rows="4" cols="60" name="text_area"></textarea>
+            <br>
+            <br>
+            <br>
+        
+            <input type="submit" value="Enviar" id="boton">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-color: #FBEECA;
+    font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div {
+    border: 1px solid black;
+    border-radius: 15px;
+    max-width: 80%;
+    padding: 2%;
+    box-shadow: 8px 8px 0px rgba(44, 27, 18, 0.829);
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center; /* Mantener centrado el título */
+}
+
+/* Estilos para los párrafos */
+p {
+    text-align: left; /* Alinea los párrafos a la izquierda */
+}

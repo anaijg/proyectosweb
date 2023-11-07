@@ -1,0 +1,44 @@
+body {
+    background-color: #f8edce;
+    font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    margin: 3%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 8px 8px 0px rgba(44, 27, 18, 0.829);
+    max-width: 80%;
+    background-color: #f5e8bb;
+}
+
+.subir_textos {
+    display: block;
+    margin-top: 10px;
+}
+
+.mover {
+    margin-bottom: 15px;
+}
+
+#boton {
+    border: none;
+    border-radius: 5px;
+    background-color: #b6ab91;
+    font-size: 22px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+textarea {
+    max-width: 90%;
+    max-height: 300px;
+}

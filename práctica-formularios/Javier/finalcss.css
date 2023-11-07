@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(176, 207, 207);
+}
+table {
+    border: 1px solid black;
+    width: 100%;
+    text-align: center;
+    background-color: aliceblue;
+    border-spacing: 0;
+}
+th {
+    border: 1px solid black;
+    width: 16.7%;
+}
+.Lista-group {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-right: 5vw;
+    padding-left: 5vw;  
+}
+#Textarea {
+    display: flex;
+    justify-content: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+h1 {
+    text-align: center;
+    background-color: azure;
+    border: 1px solid black;
+}
+.filaunp {
+    background-color: #bacddf;
+}
