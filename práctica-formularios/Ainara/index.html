@@ -59,10 +59,12 @@
             <label for="cuadro-de-nombre">Nombre (obligatorio)</label> 
             <label for="cuadro-de-apellido">Apellido (obligatorio)</label>
             <br>
+            <!--required obliga a escribir algo en este input antes de dar a enviar-->
             <input type="text" name="Nombre" size="16" id="cuadro-de-nombre" placeholder="Ej: Pedro" required>            
             <input type="text" name="Apellido" size="16"  id="cuadro-de-apellido" placeholder="Ej: Rodríguez" required>
             <br>
             <label for="cuadro-de-email">Email (obligatorio)</label> <br>
+            <!--Este input type email hace que si no añades una @ al contestar, no te deja pasar-->
             <input type="email" name="Email" id="cuadro-de-email" placeholder="Ej: pedrorodriguez@email.com" required>
         </fieldset>
         <fieldset>
@@ -73,6 +75,7 @@
             </fieldset>
             <fieldset>
                 <h2>Nivel de experiencia</h2>
+                <!-- Esto es un combo. Con la etiqueta select se muestra un desplegable y se envía el  valor que pongas en value-->
                 <select name="experiencia" id="experiencia">
                     <option value="Seleccion">Selecciona una de las opciones</option>
                     <option value="Junior">Junior</option>
@@ -93,6 +96,7 @@
             </fieldset>
             <fieldset>
                 <h2>Cuentanos algo más acerca de tu experiencia</h2>
+                <!-- Área de texto: es un cuadro grande por si el input type text se nos queda pequeño-->
                <textarea name="texto" rows="10" cols="40" id="exper"></textarea><label for="exper"></label>
             </fieldset>
             <fieldset>
