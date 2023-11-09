@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div-id-class</title>
+    <style>
+        body {
+            background-color: #f2ffe9;
+        }
+        div {
+            background-color: #a6cf98;
+            width: 50%; /* recuerda: es el 50% respecto a su contenedor, que en este caso es body*/
+            /* con margin: auto centramos el elemento respecto a derecha e izquierda */
+            margin: auto; 
+            padding: 10px;
+            /* queremos qu el texto que tengamos dentro de los div se justifique a los lados */
+            text-align: justify;
+        }
+        /* ahora quiero que cada div tenga la letra de un color diferente; para eso tengo que individualizarlos, y eso lo hago con id*/
+        #bloque1 {
+            font-size: large;
+            color: #557C55;
+        }
+        #bloque2 {
+            font-style: italic;
+            color: #FA7070
+        }
+        #bloque3 {
+            color: #f2ffe9;
+            font-weight: bold;
+        }
+        /* el problema que tiene id es que no puede haber dos iguales, y a veces quiero dar el mismo estilo diferenciado a un conjunto de elementos; entonces utilizo class, que sí que puede repetirse en diferentes elementos */
+        .clase1 {
+            background-color:  #557C55;
+            color: #f2ffe9;
+        }
+    </style>
+</head>
+<body>
+    <!--Este es el primer bloque-->
+    <!--Para diferenciar un bloque de otro, identificarlo de forma única, le asignamos un id; no puede haber dos elementos con igual id-->
+    <div id="bloque1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe tenetur non temporibus debitis totam eligendi nesciunt iure mollitia minima repellat voluptas laboriosam soluta, quae reiciendis eaque, exercitationem possimus eos enim?</div>
+    <!--Este es el segundo bloque-->
+    <div id="bloque2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, repellendus consequuntur minus delectus cumque voluptatem accusamus dolores nulla, ipsa fugit neque. Architecto ipsam autem exercitationem, quos saepe fugiat necessitatibus voluptates!</div>
+    <!--Este es el tercer bloque-->
+    <div id="bloque3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis minima adipisci necessitatibus reiciendis rem aspernatur temporibus, a consectetur? Vitae, eum. Accusantium, doloremque vero iure dicta sequi consectetur dignissimos impedit praesentium.</div>
+    <!-- En estos siguientes div lo que quiero es aplicar el mismo estilo conjuntamente a los 3, pero diferente de los anteriores div-->
+    <div class="clase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, impedit natus porro esse sed facilis. Doloribus error culpa quia nihil ipsum esse? Incidunt hic suscipit laborum fugiat architecto. Tempora, nemo.</div>
+    <div class="clase1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quas ipsam minus? Quaerat doloribus unde possimus sapiente temporibus, voluptas corrupti voluptate? Eum eveniet, repellendus error dignissimos vitae cupiditate dolores eligendi?</div>
+    <div class="clase1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae qui modi similique inventore impedit? Tempora ex molestiae saepe debitis a accusantium corporis, voluptatem nesciunt explicabo natus, modi, officiis facilis quasi.</div>
+</body>
+</html>
