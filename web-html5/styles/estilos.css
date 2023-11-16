@@ -1,0 +1,27 @@
+/*
+Colores: #395873 -> azul oscuro
+         #688EA6 -> azul no tan oscuro
+         #F2D9BB -> crema
+         #BFA995 -> marrón intermedio
+         #8C3926 -> marrón chocolate
+*/
+body {
+    background-color: #F2D9BB;
+}
+
+header, footer, nav, section, article {
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #395873;
+    padding: 10px;
+}
+
+header {
+    background-color: #BFA995;
+    text-align: center;
+}
+
+/*nav {
+    background-color: #688EA6;
+}*/
+
