@@ -1,0 +1,129 @@
+body {
+    background-color: moccasin;
+}
+
+h1 {
+    color: red;
+}
+
+img {
+    width: 10%;
+    height: 10%;
+    float: right;
+}
+
+header {
+    text-align: center;
+    width: 60%;
+    margin:auto;
+    border: 1px solid black;
+    font-family: 'Sedgwick Ave Display', cursive; /* Fuente de Google Fonts */
+}
+
+main {
+    background-color: black;    
+    width: 40%;
+    margin: auto;
+    padding: 10px;
+}
+
+nav {
+    background-color: aquamarine;
+}
+
+article {
+    background-color: blue;
+}
+
+footer {
+    width: 50%;
+    margin: auto;
+    color: saddlebrown;
+    text-align: justify;
+}
+
+.blanco {
+    color: white;
+}
+
+.amarillo {
+    color: yellow;
+}
+
+.verde {
+    color: #00ff00;
+}
+
+#seccion1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:small;
+}
+
+#seccion2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+form {
+    background-color: coral;
+}
+
+/* Tablas */
+table {
+    border-color: #113946;
+    border-width: 1px;
+    border-collapse: collapse;
+    border-style: solid;
+
+}
+th {
+    background-color: #BCA37F;
+    padding: 20px;
+    border-color: #113946;
+    border-width: 1px;
+    border-collapse: collapse;
+    border-style: solid;
+    width: 20%;
+}
+td {
+    padding: 20px;
+    background-color: #FFF2D8;
+    border-color: #113946;
+    border-width: 1px;
+    border-collapse: collapse;
+    border-style: solid;
+    width: 20%;
+    text-align: center;
+}
+
+ul {
+    background-color: azure;
+    font-size: xx-large;
+    padding-bottom: 30pt;
+    padding-top: 30pt;
+    list-style-type: square;
+}
+a:link {
+    color: #218db1;
+    background-color: transparent;
+    text-decoration:underline;
+}
+a:visited {
+    color: #218db1;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+
